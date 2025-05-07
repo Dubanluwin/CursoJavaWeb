@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cliente</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Formulario de Registro de Cliente</h1>
+    <form action="clienteRegistrado.html" method="post">
+        Nombre: <input type="text" required name="nombre" placeholder="Introduce tu nombre" size="20" maxlength="30">
+        <br>
+        Apellidos: <input type="text" required name="apellidos" placeholder="Introduce tu apellido" size="20"
+            maxlength="50"> <br>
+        DNI: <input type="text" required name="DNI" placeholder="Introduce tu DNI" size="20" maxlength="9"
+            pattern="^\d{8}[A-Za-z]$" required
+            title="Formato obligatorio: 8 dígitos seguidos de una letra (Ejemplo: 12345678Z)"><br>
+        Fecha de nacimiento: <input type="date" required name="fecha_de_nacimiento"> <br>
+        <input type="submit" value="Enviar">
+        <button
+            onclick="window.location.href='http://127.0.0.1:3002/CursoJavaWeb/src/main/webapp/clienteRegistrado.html'; return false;">
+            Ir directamente a Cliente Registrado.
+        </button>
+    </form>
+</body>
+<br>
+<button onclick="history.back()">Volver</button>
+</html>
